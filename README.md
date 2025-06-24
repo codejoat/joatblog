@@ -12,7 +12,7 @@ A personal blog about reclaiming time from bosses and bullshit, learning media b
 ## How I Built It
 
 - Pure HTML5 and vanilla CSS3, no frameworks
-- Responsive design using grid, flexbox, and media queries
+- Responsive design using flexbox, and media queries
 - Color themes via media queries and CSS custom properties
 - Layouts managed with semantic elements instead of just divs
 - Git for version control and GitHub Pages for free hosting
@@ -34,4 +34,4 @@ A personal blog about reclaiming time from bosses and bullshit, learning media b
 
 ---
 
-Built by me, fueled by caffeine.
+Built by me.
