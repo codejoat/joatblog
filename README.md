@@ -1,4 +1,4 @@
-# blogjoat
+# joatblog
 
 A personal blog about reclaiming time from bosses and bullshit, learning media by trial and error, and speaking freely. This is where I test, tinker, and occasionally overshare.
 
