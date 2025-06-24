@@ -1,0 +1,235 @@
+:root {
+  color-scheme: light dark;
+  --space-xs: 0.4rem;
+  --space-s: 0.8rem;
+  --space-m: 1.6rem;
+  --space-l: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-xxl: 4rem;
+  --color-background: #eee;
+  --color-text: #111;
+  --color-border: cadetblue;
+  --color-special: teal;
+  --color-dark-red: rgb(205, 0, 0);
+}
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+}
+html, body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: var(--space-s);
+  max-width: 1111px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 6rem;
+  padding-bottom: var(--space-m);
+  border-bottom: 1px solid var(--color-border);
+}
+.opening-script {
+  font-size: 0.9rem;
+  font-style: italic;
+  border-bottom: 1px solid var(--color-border);
+}
+main {
+  flex-grow: 1;
+}
+footer {
+  text-align: center;
+  padding: var(--space-s);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+footer nav a {
+  margin: 0 var(--space-xs);
+  text-decoration: none;
+}
+footer nav a:hover {
+  color: var(--color-text);
+}
+figure {
+  margin-bottom: var(--space-m);
+}
+figcaption {
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+p {
+  margin-bottom: 1rem;
+}
+.menu-toggle {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-text);
+  margin-right: 1rem;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: -13rem;
+  width: 13rem;
+  height: 100vh;
+  background-color: var(--color-background);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: left 0.4s ease-in-out;
+}
+.name {
+  font-size: 1.2rem;
+}
+.email {
+  font-size: 0.9rem;
+}
+.menu a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+}
+footer nav a,
+.menu a:hover,
+.current-date,
+.page-month,
+.timestamp {
+  color: var(--color-special);
+}
+#menu:target {
+  left: 0;
+}
+.menu .menu-close-x {
+  color: var(--color-dark-red);
+  margin-left: 9rem;
+}
+.menu .menu-close-x:hover {
+  color: orangered;
+}
+.close-divider {
+  border-bottom: 1px solid var(--color-border);
+}
+.entry {
+  border-bottom: 1px solid var(--color-border);
+  margin-top: var(--space-xxl);
+  padding-bottom: var(--space-s);
+  display: flow-root;
+}
+.post {
+  margin-bottom: var(--space-m);
+}
+p a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-style: italic;
+}
+.post a:hover {
+  color: var(--color-special);
+}
+p a:hover {
+  color: var(--color-special);
+}
+.support-toggle {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-special);
+  float: right;
+  font-size: 0.75rem;
+}
+.support-toggle:hover {
+  color: var(--color-text);
+}
+.support {
+  position: fixed;
+  top: 0;
+  right: -24rem;
+  width: 24rem;
+  height: 100vh;
+  background-color: var(--color-background);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: right 0.4s ease-in-out;
+}
+#support:target {
+  right: 0;
+}
+.support .menu-close-x {
+  color: var(--color-dark-red);
+}
+.support .menu-close-x:hover {
+  color: orangered;
+}
+.support a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.status-note {
+  color: orangered;
+  font-style: italic;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+    --color-background: #111;
+    --color-text: #eee;
+    --color-border: cornsilk;
+    --color-special: cadetblue;
+  }
+}
+@media (max-width: 47rem) {
+  .entry img {
+    display: block;
+    float: none;
+    margin: var(--space-s) auto;
+    width: 100%;
+  }
+}
+@media (min-width: 48rem) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    height: var(--space-xxl);
+  }
+  .entry:nth-child(odd) figure {
+    float: right;
+    margin-left: var(--space-s);
+  }
+  .entry:nth-child(even) figure {
+    float: left;
+    margin-right: var(--space-s);
+  }
+}
+@media (min-width: 93rem) {
+  .support {
+    right: -0.5rem;
+    width: auto;
+    margin-right: calc(100vw - 93rem);
+  }
+}
+
