@@ -43,7 +43,22 @@
       </div>
       <a href="#support" class="support-toggle">Support</a>
       <div>
+        <article id="add-script" class="entry">
+          <h4 class="timestamp">June 25, 2025 10:50 AM | Add Script</h4>
+          <figure>
+            <img src="images/scroll-bar.jpg" alt="the new scroll bar">
+            <figcaption>The new scroll bar!</figcaption>
+          </figure>
+          <p class="post">I added a feature this morning. I'll post a picture, but you can find this in the archives. At the request of a reader, I added a scroll-bar, which allows you to jump to any post on the page. I included the date and 2-word title, to help you find what you're looking for. I did have to go in and change some titles, as there was a duplicate or two. And, with this system, there cannot be any duplicates. So, I'll have to be real fucking careful of that in the future. Seriously... Is that how you spell seriously? Fucking hell, it's one of those moments when a word just doesn't look right. I had to search it on Google to make sure, even though I know for a fact it is correct. I just don't trust my brain. Anyways, what was I talking about? Oh yeah, seriously, if I'm not, it'll break shit. That word does not look right.</p>
+          
+          <p>So, I also added a <i>back to top</i> feature, to allow you to get... well, back to the top. Man, I should really get my thoughts in order before I post. Meh. I'm just going to keep typing until I have to go to work, which was technically now, but I delayed for a half hour. I'm literally edging work.</p>
+          
+          <p>This new feature required some more JavaScript to be added. I took a course last year. However, since I just took the course and only kept practicing other languages like C++, I don't remember shit. There is familiarity with things like addEventListener, but that's just it. When I type it, my brain says: "Hey, I remember that." Then it goes blank. So for now, I have to look up every thing I do. And because of that, there are a lot of mistakes. A lot. But, I'm diligent, and I got everything dialed in, tested, and working.</p>
 
+          <p>One of the problems I had did lead me to my next task. I have to split the scripts and styles into separate folders. One of the issues I had, was that the scroll initially didn't work until I added a DOMContentLoaded event listener. Then, it still wasn't working. Looking into the console, there was an error. Basically, I had only two functions in JavaScript. One to run the date on the home page and the other to run the scroll-bar on the archives page. But, I had to include the script on both pages, and since the archives don't have a current date, The script was like: "You don't have this, so I'm not running anything else here, fuck you!" And that made me sad. To get around it for now, I just added an variable-name and an if-statement to the date, and that works for now.</p>
+
+          <p>It will eventually cause problems in the future. So, my next task is to create a styles and script folder and split up the individual uses for each. I'd still like to keep this as minimal as possible, but it does need some functionality. Thinking about it, it will eventually have to have a back end. I'm hoping to get to that this year. I can't imagine how bad it might run trying to load six months, or a years worth of posts every time someone visits. Now, the word visits looks stupid. Fuck. These posts are about me learning and building as I go. The hope is that my learning can outpace my needs in the moment. I think they can, I think I am keeping up, but I'm sure I need to start hitting the books again. Get JS down, then move on to the backend crap. Alright, I'm going to drink a bit more coffee and go to work.</p>
+        </article>
       </div>
       <nav id="support" class="support" aria-label="Support panel">
         <a href="#" class="menu-close-x">X</a>
@@ -63,7 +78,7 @@
 </html>
 
 <!-- Entry template: Use this to add new posts to the current page. Just copy-pasta this shit. Rework timestamp to current time, add image to src="", type a motherfuckin caption for that shit, and maybe an alt, and put your thoughts between the <p>s. If no image, you can delete figure or not, with nothing in it, it shouldn't affect anything.
-<article class="entry">
+<article id="" class="entry">
   <h4 class="timestamp">June 23, 2025 8:50 AM | </h4>
   <figure>
     <img src="" alt="">
