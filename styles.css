@@ -8,6 +8,7 @@
   --space-xxl: 4rem;
   --color-background: #eee;
   --color-text: #111;
+  --color-scroll: #ddd;
   --color-border: cadetblue;
   --color-special: teal;
   --color-dark-red: rgb(205, 0, 0);
@@ -194,12 +195,26 @@ p a:hover {
   color: orangered;
   font-style: italic;
 }
+#post-select {
+  background-color: var(--color-scroll);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+.to-top {
+  display: block;
+  clear: both;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--color-special);
+  font-size: 0.9rem;
+}
 @media (prefers-color-scheme: dark) {
     :root {
     --color-background: #111;
     --color-text: #eee;
     --color-border: cornsilk;
     --color-special: cadetblue;
+    --color-scroll: #222;
   }
 }
 @media (max-width: 47rem) {
