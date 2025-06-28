@@ -126,12 +126,14 @@ footer nav a,
 }
 .menu .menu-close-x {
   color: var(--color-dark-red);
-  margin-left: 9rem;
+  margin-left: 10rem;
 }
 .menu .menu-close-x:hover {
   color: orangered;
 }
-.close-divider {
+
+.current-day {
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--color-border);
 }
 .entry {
